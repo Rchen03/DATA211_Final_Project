@@ -1,0 +1,119 @@
+/* Now suppose you had many pages, or many different containers that might need to change at once... define some variables!*/
+
+:root {
+    
+    --back: rgba(116, 240, 240, 0.027);
+    --front: black;
+    --link:rgb(185, 151, 91);
+    --link-visisted:purple;
+    --title-color: rgb(17, 87, 64);
+
+    /* Just swap the comments between the block above and below to toggle page design*/
+
+    /*
+    --back: white;
+    --front: black;
+    --link: blue;
+    --link-visisted: purple;
+    */
+
+    --img-width: 700px;
+    /* We can do some basic math within CSS.  I think that's most-browser compatible? */
+    /*--caption-width: 600px*/
+    --caption-width: calc(var(--img-width) - 100px);
+    --div-space: 100px;
+
+    /*--header-font: Arial, Helvetica, sans-serif*/
+    /* Good old serif fonts just look better I think! */
+    --header-font: 'Times New Roman', Times, serif
+}
+
+html {
+    margin: 30px;
+    padding: 0px;
+}
+
+div {
+    margin-top: 20px;
+}
+
+h1 {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: var(--title-color);
+}
+h1:after {
+    display: inline-block;
+    margin: 0 0 8px 20px;
+    height: 3px;
+    content: " ";
+    text-shadow: none;
+    background-color: #999;
+    width: 140px;
+}
+h1:before {
+    display: inline-block;
+    margin: 0 20px 8px 0;
+    height: 3px;
+    content: " ";
+    text-shadow: none;
+    background-color: #999;
+    width: 140px;
+}
+
+body {
+    background-color: var(--back);
+    color: var(--front);
+    /*font-family: 'Times New Roman', Times, serif;*/
+    font-family:'Helvetica', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+h1 {
+    font-family: var(--header-font)
+}
+
+h2 {
+    font-family: var(--header-font)
+}
+
+h3 {
+    font-family: var(--header-font)
+}
+
+
+
+a:link {
+    font-weight: normal;
+    color: var(--link);
+}
+
+a:visited {
+    font-weight: bold;
+    color:var(--link-visisted);
+}
+
+.img-centered {
+    width: var(--img-width); 
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.p-caption {
+    width: var(--caption-width); 
+    margin-left: auto; 
+    margin-right: auto;
+    font-size: smaller;
+    font-family: var(--header-font)
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+  padding: 20px;
+}

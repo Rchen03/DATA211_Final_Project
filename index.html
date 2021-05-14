@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Final Project</title>
+        <link rel="stylesheet" href="\styles\style.css">
+    </head>
+    <body>
+        <h1>An In-depth Look at the Value of Higher Education</h1>
+            <h2>Introduction</h2>
+            <p>
+                College tuition has been rising every year and attending college has become more expensive than ever. This project aims to explore the costs of college tuition in the US, by geographic area, degree type, family income level, and earning potentials. We are especially interested in evaluating the return on investment (ROI) in higher education. Measuring the value of higher education is very important, especially for students who need as much information as possible to make an informed decision about whether and where to go to college. Colleges that are not serving their students well, or are serving students inefficiently relative to other colleges, should be identified. 
+            </p>
+        <div>
+            <h2>About the Datasets</h2>
+            <p>
+                In this project, the datasets we used spam various facets of higher education. One of the datasets we used include data on historical college tuition averages from <a href="https://nces.ed.gov/fastfacts/display.asp?id=76" target="_blank" rel="noopener noreferrer">the National Center for Education Statistics (NCES)</a>, covering 1985-2016. Also, we utilized data on salary potential (from <a href = "https://www.payscale.com/college-salary-report/best-schools-by-state/bachelors/new-hampshire" target="_blank" rel="noopener noreferrer">payscale.com</a>) by college/university, along with potential salary rank within state, geographic location (by state), estimated early career pay in USD, estimated mid-career pay in USD, percent of alumni who think they are making the world a better place,  and the percent of the student body in STEM. This dataset is used the most in this project, and we merge this dataset with other datasets to answer different questions. 
+                <br><br>
+                We also used the dataset that includes data on tuition and fees by college/university for 2018-2019, along with school type, degree length, state, in-state vs out-of-state from <a href = "https://www.chronicle.com/article/tuition-and-fees-1998-99-through-2018-19/" target="_blank" rel="noopener noreferrer">the Chronicle of Higher Education</a>. In order to show the change in household income in the past decade and compare it to the raising tuition cost, we also used data covering the mean household income received by each fifth and the top 5% in America from <a href = "https://www.census.gov/data/tables/time-series/demo/income-poverty/historical-income-households.html" target="_blank" rel="noopener noreferrer">the Census Bureau</a>. Additionally, we used data on net cost by income bracket for 2018-2019, along with total price to demonstrate how the net cost of higher education differs by family income levels (from <a href = "https://www.tuitiontracker.org/" target="_blank" rel="noopener noreferrer">tuitiontracker.org</a>). The available datasets which allows us to take a more in-depth look at the return on investment of higher education. However, measuring the value of college, both at an individual level and at an aggregated state level, is an extremely complex matter.
+                 
+            </p>
+
+        </div>
+
+        <div>
+            <h2>Discrepancy in Growth between Tuition and Income </h2>
+            <p>
+                The historical trends show that the cost of higher education has been increasing at a steady rate, and despite the institution type, the average cost of attending college has increased substantially over the past decade. On the other hand, the mean household income remained relatively the same for 80% of American households, which makes pursuing higher education more difficult for the majority of families in the US. 
+            </p>    
+
+        <div class="row">
+            <div class="column">
+            <img src="\resources\hist_trend.png" alt="historical tuition" style="width:100%">
+            
+            </div>
+
+            <div class="column">
+            <img src="\resources\hist_income.png" alt="historical income" style="width:100%">
+            
+            </div>
+        </div>
+
+        <div>
+            <h2>The Cost of College Can Be Difficult to Calculate</h2>
+            <h3>Differ by School and Tuition Types</h3>
+            <p>
+                The data we used to generate the trend lines is based on Colleges’ published tuition and fees (the “sticker price”). The net price of college (the amount students and their families pay after all scholarships/financial aids) has grown at a much slower rate (Ma et al. 2017). Although grants and scholarships make college more affordable for many students, the actual cost of college can still be difficult to calculate. If a student is attending a public school, the in-state tuition is usually much cheaper than the out-of-state tuition, which makes the “sticker price” of a public school a lot more attractive to in-state students. Moreover, the total cost of attending a private school is overall much higher than attending a public school regardless of whether a student is paying in-state or out-of-state tuition. 
+            </p>
+            
+            <img src="\resources\total_cost_dist.png" class = img-centered style="width:50%">
+            
+            <h3>Differ by Income Brackets</h3>
+            <p>
+                For domestic students, those from lower income households will pay less for college compared to those from higher income families. Most students do not pay the full “ticker price” for college.
+            </p>
+            <img src="\resources\income_cost_plot.png" class = img-centered style="width:70%">
+
+    
+
+            
+            <h2>Return on Investment on Higher Education </h2>
+            <p>
+                By definition (from <a href = "https://www.investopedia.com/terms/r/returnoninvestment.asp#:~:text=Return%20on%20investment%20(ROI)%20is,relative%20to%20the%20investment%27s%20cost." target="_blank" rel="noopener noreferrer">Investopedia.com</a>), the return on investment is  (current value of investment  - cost of investment) / (current value of investment). Since the current value of investment will not be too far off from its nominal value since college usually takes around 4 years (this project only considers undergraduate), we used the annual earning potential (early-career and mid-career) as the current value of investment and the total cost (tuition + fees) as the cost of investment. This statistic we proposed is far from perfect since it is extremely difficult to estimate the actual cost of college as mentioned above. This return on investment statistic would be better used as a reference for the relative short-term cost-effectiveness of attending a certain college. However, we were able to see some interesting patterns by using choropleth to demonstrate the median ROI by states.
+            </p>
+            <iframe src="\resources\ROI_map.html" class = img-centered width="200" height="400"></iframe>   
+            <br>
+            <p>
+                The choropleth includes early- and mid-career returns on both in-state and out-of-state tuitions. We found that for in-state tuition, Utah, Wyoming, Idaho have the highest median early- and mid-career returns. For out-of-state tuition, Utah, Wyoming, Idaho, South Dakota, New Mexico, and Mississippi have the highest median early- and mid-career returns. Although it does not mean all colleges from those states are guaranteed for a better ROI, we can say that these states potentially have more schools with lower cost and a promising earning potential after graduation. 
+            </p>
+            <img src="\resources\corr_heatmap.png"  align = "left"  style="padding-right: 30px; width: 50%">
+            <p>
+                When evaluating the value of higher education, the degree types may also affect the earning potential. We found a strong positive relationship between STEM major percentage and the earning potential of the graduates. In fact, it has become apparent to many students that major types can produce different earnings returns. However, the relationship between a student’s selected major, and institution can be complex, and some degree-major scenarios may not pay off until later in life, or ever (Barrow and Malamud 2015; Webber 2016).
+            </p>
+
+
+            <h2>The Non-Monetary Value of College Education</h2>
+            <p>
+                Interesting enough, there is a moderate negative relationship between the tuition cost and self-fulfillment percentage and a weak negative relationship between earning potential and self-fulfillment percentage. Self-fulfilment is determined by percent of alumni who think they are making the world a better place. Aside from the monetary return from higher education, self-fulfillment is very important to many people's measure of success and should be taken into consideration when evaluating the returns on higher education. Although we are not able to conclude anything from these correlations, it is implied that a number of people feel unfulfilled after graduating college or even after they start making money. 
+            </p>
+
+            <p>
+                The bottom line is that when a student is trying to decide whether or not to attend college, or which college to attend, they should really think about what they want to get out of from higher education and make decisions accordingly. Trying to maximize monetary returns may not always be the best answer. The value of higher education is more than just how much money you make after graduation and the intangible, non-monetary benefits of college education should not be overlooked.
+            </p>
+            <br><br><br>
+        </div>
+        <h2>Reference</h2>
+        <p><a href = "https://www.annualreviews.org/doi/abs/10.1146/annurev-economics-080614-115510" target="_blank" rel="noopener noreferrer">Barrow, Lisa, and Ofer Malamud. 2015. “Is College a Worthwhile Investment?” Annual Review of Economics 7: 519–55.</a></p>
+        <p><a href = "https://eric.ed.gov/?id=ED586395" target="_blank" rel="noopener noreferrer">Ma, Jennifer, Sandy Baum, Matea Pender, and Meredith Welch. 2017. Trends in College Pricing 2017. New York: College Board.</a></p>
+        <p><a href = "https://www.sciencedirect.com/science/article/abs/pii/S0272775715300224" target="_blank" rel="noopener noreferrer">Webber, Douglas A. 2016. “Are College Costs Worth It? How Ability, Major, and Debt Affect the Returns to Schooling.” Economics of Education Review 53: 296–310.</a></p>
+    </body>
+</html>
