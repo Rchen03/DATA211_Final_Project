@@ -52,6 +52,7 @@ h1:after {
     text-shadow: none;
     background-color: #999;
     width: 140px;
+    color: rgb(185, 151, 91)
 }
 h1:before {
     display: inline-block;
@@ -61,6 +62,7 @@ h1:before {
     text-shadow: none;
     background-color: #999;
     width: 140px;
+    color:rgb(185, 151, 91)
 }
 
 body {
