@@ -75,7 +75,8 @@ h1 {
 }
 
 h2 {
-    font-family: var(--header-font)
+    font-family: var(--header-font);
+    color: var(--title-color);
 }
 
 h3 {
